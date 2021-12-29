@@ -20,9 +20,13 @@ class App extends Component {
           <Navbar />
 
           <Routes>
-            <Route exact path='/' element={< Home />}></Route>
-            <Route exact path='/about' element={< About />}></Route>
-            <Route exact path='/contact' element={< Contact />}></Route>
+            <Route end path='/' element={< Home />}></Route>
+            <Route end path='/about' element={< About />}></Route>
+            <Route end path='/contact' element={< Contact />}></Route>
+            {/* <Route path="/" render={(props) => <Home {...props} />} />
+            <Route path="/about" render={(props) => <About {...props} />} />
+            <Route path="/contact" render={(props) => <Contact {...props} />} /> */}
+
           </Routes>
         </div>
 

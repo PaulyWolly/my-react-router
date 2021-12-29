@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import './Navbar.css'
 
 export default function Navbar() {
 
@@ -22,13 +23,16 @@ export default function Navbar() {
                         <ul className="navbar-nav">
 
                             <li className="nav-item">
-                                <Link className='nav-link link active' to="/">Home</Link>
+                            <NavLink to="/" style={({isActive}) => ({color: isActive ? 'blue' : 'black'})} className={({isActive}) => `nav_link${isActive ? " active" : ""}`} >Home</NavLink>
+                                {/* <NavLink end className='nav-link link active' to="/">Home</NavLink> */}
                             </li>
                             <li className="nav-item">
-                                <Link className='nav-link link active' to="/about">About Us</Link>
+                            <NavLink to="/about" style={({isActive}) => ({color: isActive ? 'blue' : 'black'})} className={({isActive}) => `nav_link${isActive ? " active" : ""}`} >About</NavLink>
+                                {/* <NavLink end className='nav-link link active' to="/about">About Us</NavLink> */}
                             </li>
                             <li className="nav-item">
-                                <Link className='nav-link link active' to="/contact">Contact Us</Link>
+                            <NavLink to="/contact" style={({isActive}) => ({color: isActive ? 'blue' : 'black'})} className={({isActive}) => `nav_link${isActive ? " active" : ""}`} >Contact</NavLink>
+                                {/* <NavLink end className='nav-link link active' to="/contact">Contact Us</NavLink> */}
                             </li>
                         </ul>
                     </div>
